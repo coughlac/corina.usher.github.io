@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Corina Usher's articles</title>
     <style>
-         <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -13,63 +12,47 @@
             margin: 0 auto;
             padding: 20px;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+
+        #toc {
+          background: #f9f9f9;
+          border: 1px solid #aaa;
+          padding: 10px;
+          width: 300px;
         }
-        h1 {
-            font-size: 2.5em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        #toc-list {
+          list-style-type: none;
+          padding-left: 0;
         }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 30px;
+
+        #toc-list li {
+          margin-bottom: 5px;
         }
-        h3 {
-            font-size: 1.5em;
-            margin-top: 20px;
+
+        #toc-list a {
+          text-decoration: none;
+          color: #333;
         }
-        p {
-            margin-bottom: 15px;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        sup {
-            font-size: 0.75em;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-            top: -0.5em;
-        }
-        .reference {
-            color: #3498db;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .reference:hover {
-            text-decoration: underline;
+
+        #toc-list a:hover {
+          text-decoration: underline;
         }
 
     </style>
 </head>
 <body>
-<ul>
-    <li>
-        <a href="branchByAbstraction/branchByAbstraction.html">Branch by abstraction</a>
-    </li>
-    <li>
-        <a href="expandAndContract/expandAndContract.html">Expand and Contract</a></li>
-    <li>
-        <a href="trunkBasedDev/trunkBasedDevelopment.html">Trunk Based Development</a>
-    </li>
-</ul>
+<div id="toc">
+    <h2>Table of Contents</h2>
+    <ul id="toc-list">
+        <li>
+            <a href="branchByAbstraction/branchByAbstraction.html">Branch by abstraction</a>
+        </li>
+        <li>
+            <a href="expandAndContract/expandAndContract.html">Expand and Contract</a></li>
+        <li>
+            <a href="trunkBasedDev/trunkBasedDevelopment.html">Trunk Based Development</a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
