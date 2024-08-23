@@ -41,12 +41,38 @@
         a:hover {
             text-decoration: underline;
         }
+        sup {
+            font-size: 0.75em;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            top: -0.5em;
+        }
+        .reference {
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .reference:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
 <article>
     <h1>Branch by Abstraction: A Gradual Approach to Code Changes</h1>
 
+    <p>In the world of software development, making significant changes to your codebase can be a daunting task.
+        Traditional methods like branching in source control or using conditional statements have their drawbacks. Enter
+        "Branch by Abstraction,"<sup><a href="#ref1" class="reference">[1]</a></sup> a technique that offers a more gradual and manageable approach to implementing
+        large-scale changes.</p>
+
+    <h2>What is Branch by Abstraction?</h2>
+    <img src="images/overview.png" alt="Branch by Abstraction Diagram">
+    <p>Branch by Abstraction is a method that allows you to make substantial changes to your code incrementally, without
+        resorting to long-lived feature branches. This technique was coined by Stacy Curl in 2007 and has since gained
+        popularity among developers seeking a more flexible approach to code refactoring.</p>
     <p>In the world of software development, making significant changes to your codebase can be a daunting task. Traditional methods like branching in source control or using conditional statements have their drawbacks. Enter "Branch by Abstraction," a technique that offers a more gradual and manageable approach to implementing large-scale changes.</p>
 
     <h2>What is Branch by Abstraction?</h2>
@@ -67,7 +93,9 @@
     <h2>Step 1: Introduce an Abstraction</h2>
     <img src="images/step1.png" alt="Step 1: Introduce an Abstraction">
     <ol>
-        <li>Create an abstraction layer over the code you plan to change. This is typically done by extracting an interface.</li>
+        <li>Create an abstraction layer over the code you plan to change. This is typically done by extracting an
+            interface.
+        </li>
         <li>Update all client code to use this new abstraction instead of calling the old code directly.</li>
         <li>Commit and push your changes. If your build passes, you're good to release.</li>
     </ol>
@@ -83,16 +111,24 @@
 
     <h2>Step 3: Clean Up</h2>
     <ol>
-        <li>Depending on how much of the old implementation you've migrated to the abstraction, consider deprecating or safely deleting the original implementation.</li>
+        <li>Depending on how much of the old implementation you've migrated to the abstraction, consider deprecating or
+            safely deleting the original implementation.
+        </li>
         <li>Commit and push these changes. If your build is green, you can release.</li>
-        <li>Evaluate whether the abstraction is still necessary. If there's only one implementation or if it feels inelegant, consider removing it.</li>
+        <li>Evaluate whether the abstraction is still necessary. If there's only one implementation or if it feels
+            inelegant, consider removing it.
+        </li>
     </ol>
 
     <h2>Conclusion</h2>
-    <p>Branch by Abstraction offers a powerful alternative to traditional branching strategies. By allowing for incremental changes and continuous integration, it reduces risk and increases flexibility in your development process. Give it a try on your next big refactoring project!</p>
+    <p>Branch by Abstraction offers a powerful alternative to traditional branching strategies. By allowing for
+        incremental changes and continuous integration, it reduces risk and increases flexibility in your development
+        process. Give it a try on your next big refactoring project!</p>
 
     <h2>References</h2>
-    <p><a href="http://digital-compulsion.blogspot.com/2007/04/">Curl, S. (2007, April). Digital Compulsion.</a></p>
+    <ol>
+        <li><a href="http://digital-compulsion.blogspot.com/2007/04/" alt="Curl, S. (2007, April). Digital Compulsion.">Curl, S. (2007, April). Digital Compulsion.</a> </li>
+    </ol>
 </article>
 </body>
 </html>
