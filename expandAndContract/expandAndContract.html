@@ -57,38 +57,37 @@
             text-decoration: underline;
         }
 
-
-
-
-
-
     </style>
 </head>
 <body>
 <article>
     <h1>Expand and Contract: A Gradual Approach to Code Changes</h1>
-
-    <p>In the world of software development, making significant changes to your codebase can be a daunting task.
+    <p>
+        In the world of software development, making significant changes to your codebase can be a daunting task.
         Traditional methods like branching in source control or using conditional statements have their drawbacks. Enter
         "Expand and Contract," a technique that offers a more gradual and manageable approach to implementing
         large-scale changes<sup><a href="#ref1" class="reference">[1]</a></sup><sup><a href="#ref2" class="reference">[2]</a></sup>.
     </p>
-
     <h2>What is Expand and Contract?</h2>
     <img src="images/overview.png" alt="Expand and Contract Diagram">
-    <p>Expand and Contract<sup><a href="#ref1" class="reference">[1]</a></sup>, also known as the Parallel Change
+    <p>
+        Expand and Contract<sup><a href="#ref1" class="reference">[1]</a></sup>, also known as the Parallel Change
         pattern<sup><a href="#ref2" class="reference">[2]</a></sup> , is a well-established approach for introducing
-        backward-incompatible changes[1][2]. It consists of three distinct phases: expand, migrate, and contract.</p>
+        backward-incompatible changes[1][2]. It consists of three distinct phases: expand, migrate, and contract.
+    </p>
 
     <h2>The Key Benefits</h2>
     <ol>
-        <li><em>Zero downtime:</em> Incompatible changes to data structures can be deployed without any system downtime
+        <li>
+            <em>Zero downtime:</em> Incompatible changes to data structures can be deployed without any system downtime
         </li>
-        <li><em>Easier testing:</em> The pattern allows running application instances with old and new code in
+        <li>
+            <em>Easier testing:</em> The pattern allows running application instances with old and new code in
             parallel, making it easier to deploy and test code changes on a subset of instances first.
             Incompatible changes to data structures can be deployed without any system downtime
         </li>
-        <li><em>Enables advanced release techniques:</em> The backwards compatible nature of changes allows for
+        <li>
+            <em>Enables advanced release techniques:</em> The backwards compatible nature of changes allows for
             feature flags, dark launching, and canary releasing
         </li>
     </ol>
@@ -97,33 +96,37 @@
     <p>In the expand phase, the code is modified to support both old and new versions simultaneously. This allows
         existing clients to continue using the old version while new changes are introduced incrementally. For example,
         when introducing a new mandatory field in a class, it would initially be added as optional to maintain
-        compatibility with the old version.</p>
-
+        compatibility with the old version.
+    </p>
     <h2>The Migrate Phase</h2>
     <img src="images/step2.png" alt="Migrate Phase Diagram">
     <p>During the migrate phase, all client code is gradually updated to use the new version, and the old version is
-        deprecated. In our example, all code would now expect and be able to process the new optional field.</p>
-
+        deprecated. In our example, all code would now expect and be able to process the new optional field.
+    </p>
     <h2>The Contract Phase</h2>
     <p>Once the migrate phase is complete, the old version can be removed in the contract phase. At this point, the new
-        field can be made mandatory, as all code will now supply it.</p>
-
+        field can be made mandatory, as all code will now supply it.
+    </p>
     <h2>Conclusion</h2>
-    <p>The Expand and Contract pattern provides a safe and gradual approach to implementing breaking changes in software
-        systems. By following this pattern, developers can make significant modifications to their codebase while
-        minimizing disruption to existing functionality. It is a good choice for implementing complex changes in
+    <p>
+        The Expand and Contract pattern provides a safe and gradual approach to implementing breaking changes in
+        software systems. By following this pattern, developers can make significant modifications to their codebase
+        while minimizing disruption to existing functionality. It is a good choice for implementing complex changes in
         systems, particularly those that cannot afford downtime.
     </p>
     <h2>References</h2>
     <ol>
-        <li><a href="https://www.tim-wellhausen.de/papers/ExpandAndContract/ExpandAndContract.html" alt="Wellhausen, T. (n.d.). Expand and Contract - A Pattern to Apply Breaking Changes to Persistent Data with
+        <li>
+            <a href="https://www.tim-wellhausen.de/papers/ExpandAndContract/ExpandAndContract.html" alt="Wellhausen, T. (n.d.). Expand and Contract - A Pattern to Apply Breaking Changes to Persistent Data with
             Zero Downtime">Wellhausen, T. (n.d.). Expand and Contract - A Pattern to Apply Breaking Changes to
-            Persistent Data with
-            Zero Downtime</a>
+                Persistent Data with
+                Zero Downtime</a>
         </li>
-        <li><a href="https://martinfowler.com/bliki/ParallelChange.html" alt="Fowler, M. (2014, May 13). Parallel Change.
+        <li>
+            <a href="https://martinfowler.com/bliki/ParallelChange.html" alt="Fowler, M. (2014, May 13). Parallel Change.
             Martin Fowler's Bliki.">Fowler, M. (2014, May 13). Parallel Change.
-            Martin Fowler's Bliki. </a></li>
+                Martin Fowler's Bliki. </a>
+        </li>
     </ol>
 </article>
 </body>
