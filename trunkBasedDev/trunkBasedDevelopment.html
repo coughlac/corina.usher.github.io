@@ -112,7 +112,7 @@
         </li>
     </ul>
     </p>
-    <img src="./images/ci.png" alt="Continuous Integration" height="400" width="700">
+    <img src="./images/ci.png" alt="Continuous Integration" width="700">
     <p>
         Continuous integration means smaller commits, meaning smaller reviews – so hopefully shorter review cycles.
         Combined, these all help achieve faster release cycles. Faster access to feedback on your product.
@@ -137,7 +137,7 @@
     <p>
         Basically, it is a defensive barrier put in place to protect the product and the code.
     </p>
-    <img src="images/featureBranches.png" alt="Feature Branching" height="400" width="700">
+    <img src="images/featureBranches.png" alt="Feature Branching" width="700">
     <p>
         This diagram is a somewhat simple example – in the real world we would have many features rather than just 2,
         but the idea is the same.
@@ -201,7 +201,7 @@
         process. It is not really a continuous integration strategy.
     </p>
     <h2>Trunk Based Development</h2>
-    <img src="./images/tbd.png"  alt="Trunk Based Development" height="400" width="700">
+    <img src="./images/tbd.png"  alt="Trunk Based Development" width="700">
     <p>
         As code is frequently pushed to main, merges happen all the time, they are just smaller.
     </p>
@@ -226,7 +226,7 @@
         So why isn’t everyone doing Trunk Based Development?
     </p>
     <h2>Common Friction Points</h2>
-    <img src="./images/commonFrictionPoints.png" alt="Common Friction Points" height="400" width="700">
+    <img src="./images/commonFrictionPoints.png" alt="Common Friction Points" width="700">
     <p>
         I often find that to be agile, we must be very disciplined and apply rigour to our practises.
     </p>
@@ -297,7 +297,7 @@
     <p>
         This is down to the way we work.
     </p>
-    <img src="./images/separateConcerns.png" alt="Separate Concerns" height="400" width="700">
+    <img src="./images/separateConcerns.png" alt="Separate Concerns" width="700">
 
     <p>
         Now our branching strategy can be closer to a true Continuous Integration solution where the branch can be
@@ -321,7 +321,7 @@
         Let’s explore some techniques.
     </p>
     <h2>Strategies for Feature Development</h2>
-    <img src="./images/strategiesForFeatureDev.png"alt="Strategies for Feature Development" height="400" width="700">
+    <img src="./images/strategiesForFeatureDev.png"alt="Strategies for Feature Development" width="700">
 
     <p>
         How do we go about developing features on main - when main can be released at any time?
@@ -335,7 +335,7 @@
     <h2>Branch by Abstraction</h2>
     <h2>What is Branch by Abstraction?</h2>
 
-    <img src="../branch%20by%20abstraction/images/overview.png" alt="Branch by Abstraction Diagram" height="400" width="700">
+    <img src="../branchByAbstraction/images/overview.png" alt="Branch by Abstraction Diagram" height="400" width="700">
     <p>Branch by Abstraction is a method that allows you to make substantial changes to your code incrementally, without
         resorting to long-lived feature branches. This technique was coined by Stacy Curl in 2007<sup><a href="#ref3"
                                                                                                          class="reference">[3]</a></sup>
@@ -354,7 +354,7 @@
     <p>Let's break down the process step by step:</p>
 
     <h2>Step 1: Introduce an Abstraction</h2>
-    <img src="../branch%20by%20abstraction/images/step1.png" alt="Step 1: Introduce an Abstraction" height="400" width="700">
+    <img src="../branchByAbstraction/images/step1.png" alt="Step 1: Introduce an Abstraction" height="400" width="700">
     <ol>
         <li>Create an abstraction layer over the code you plan to change. This is typically done by extracting an
             interface.
@@ -364,7 +364,7 @@
     </ol>
 
     <h2>Step 2: Implement the New Solution</h2>
-    <img src="../branch%20by%20abstraction/images/step2.png" alt="Step 2: Implement the New Solution" height="400" width="700">
+    <img src="../branchByAbstraction/images/step2.png" alt="Step 2: Implement the New Solution" height="400" width="700">
     <ol>
         <li>Develop a new implementation of the abstraction, complete with tests to ensure functionality.</li>
         <li>Commit and push this new implementation. Again, if your build is green, you can release.</li>
@@ -384,7 +384,7 @@
     </ol>
     <h2>Expand and Contract</h2>
     <h2>What is Expand and Contract?</h2>
-    <img src="../expand%20and%20contract/images/overview.png" alt="Expand and Contract Diagram" height="400" width="700">
+    <img src="../expandAndContract/images/overview.png" alt="Expand and Contract Diagram" height="400" width="700">
     <p>Expand and Contract<sup><a href="#ref4" class="reference">[4]</a></sup>, also known as the Parallel Change
         pattern<sup><a href="#ref5" class="reference">[5]</a></sup> , is a well-established approach for introducing
         backward-incompatible changes. It consists of three distinct phases: expand, migrate, and contract.</p>
@@ -402,14 +402,14 @@
         </li>
     </ol>
     <h2>The Expand Phase</h2>
-    <img src="../expand%20and%20contract/images/step1.png" alt="Expand Phase Diagram" height="400" width="700">
+    <img src="../expandAndContract/images/step1.png" alt="Expand Phase Diagram" height="400" width="700">
     <p>In the expand phase, the code is modified to support both old and new versions simultaneously. This allows
         existing clients to continue using the old version while new changes are introduced incrementally. For example,
         when introducing a new mandatory field in a class, it would initially be added as optional to maintain
         compatibility with the old version.</p>
 
     <h2>The Migrate Phase</h2>
-    <img src="../expand%20and%20contract/images/step2.png" alt="Migrate Phase Diagram" height="400" width="700">
+    <img src="../expandAndContract/images/step2.png" alt="Migrate Phase Diagram" height="400" width="700">
     <p>During the migrate phase, all client code is gradually updated to use the new version, and the old version is
         deprecated. In our example, all code would now expect and be able to process the new optional field.</p>
 
@@ -486,7 +486,7 @@
 <!--        a dark launch is tested code just wired in to production flows.-->
 <!--    </p>-->
     <h2>Reflections</h2>
-    <img src="images/reflections.png" alt="Reflections" height="400" width="700">
+    <img src="images/reflections.png" alt="Reflections" width="700" >
     <p>
         What I really like about Trunk Based Development is that development flow is not disrupted by a review process.
         Our team is an agile team, and we adopt a lot of XP practises such as pair programming and mobbing. One of the
