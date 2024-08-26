@@ -68,46 +68,266 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
 <article>
-    <h1> Trupling: Elevating Pair Programming to a Trio</h1>
-    <h2>The Philosophy of Constant Collaboration</h2>
+    <h1>Truple - Elevating the Pair</h1>
+    <h2>Introduction</h2>
     <p>
-        I'm a firm believer in the power of pairing for all tasks, no matter how small. Even drafting an email can
-        benefit from a second perspective. This commitment to collaboration extends to how I manage team dynamics,
-        especially when faced with an odd number of team members.
-        I have and continue to experiment with Software Teaming (Mob Programming), and as a result, I have coined the phrase
-        <em>Trupling</em>.
+        I'm a firm believer in the power of Pairing for all tasks, no matter how small. Even drafting an email
+        can benefit from a second perspective.
     </p>
-    <h2>Introducing the 'Truple'</h2>
     <p>
-        Instead of relegating the "extra" person to solo or housekeeping tasks, we've developed a three-person
-        collaborative unit we call a <em>'truple'</em> (a play on our use of 'tuple' for pairing).
+        In fact, I would even go so far as to say that Software Teaming (Mob Programming) may be my preferred
+        option for
+        use cases such as:
+    <ul>
+        <li>Defining the ubiquitous language of the domain model</li>
+        <li>Discussing and documenting architectural designs</li>
+        <li>Creating Architectural Decision Records (ADRs)</li>
+    </ul>
     </p>
-    <h2>The Roles of 3: Dynamics in a Three-Person "Pair"</h2>
+    <h2>1 - a lone developer?</h2>
     <p>
-        When three people collaborate, each can assume a distinct role to maximize productivity and effectiveness:
+        I frequently hear fellow Pair Programmers mention that when there is an odd number of developers
+        on their team — due to holidays, illness, or other reasons — the <em>lone</em> developer is assigned
+        housekeeping tasks to
+        handle on their own.
+    </p>
+    <p>
+        This always makes me feel uneasy. I dislike the <em>lone</em> developer problem, as I cannot think of many tasks
+        that would warrant a developer to work on it<i>AND</i> not benefit from Pairing on it.
+    </p>
+
+
+    <h2>3 - a magic number?</h2>
+    <p>
+        I have been practising Software Teaming for several years now. As an alternative, I get teams to absorb the <em>lone</em>
+        developer into one of our pairs.
+    </p>
+    <p>
+        <b>I find Pair Programming to be very effective. So, why is it that engagement between three people, in the <i>same
+            team</i>, deteriorates so quickly?</b>
+    </p>
+    <p>I have found that they suffer from some of the same challenges as Software Mobbing,
+        particularly, a lack of engagement by the participants not actively in the roles of Navigator or Driver.<sup><a
+                href="#ref1"
+                class="reference">[1]</a></sup><sup><a href="#ref2" class="reference">[2]</a></sup>
+    </p>
+
+    <p>
+        In my experience, the third person just became a <em>third wheel,</em> typically sharing the Navigator role
+        without contributing anything meaningful. In fact, the competition for this role often diminishes its quality,
+        making it
+        less effective than if the third person had simply disengaged completely, distracted by their phone, chat, or
+        other distractions (which I have found to be the other most popular outcome).
+    </p>
+    <h2>Truple - a magic word?</h2>
+    <p>
+        Rather than assigning the <em>lone</em> developer to housekeeping tasks or allowing them to become a <em>third
+        wheel,</em>I’d like to introduce you to my new experiment: a collaborative unit I refer to as a <b>Truple</b> (a
+        nod to our use of 'tuple' in pairing).
+    </p>
+    <p>
+        What’s the key difference? It’s the rules. <em>More specifically, it's a refinement of roles, bounded by scopes,
+        that allows everyone to remain engaged in their respective responsibilities.</em>
+    </p>
+    <p> Furthermore, the redefined
+        roles should create a more focused and efficient collaborative process and that should result in improved
+        quality, productivity and team dynamics.
+    </p>
+
+    <h2>The Truple Dynamic</h2>
+    <p>
+        By clearly defining the roles and distinct role boundaries within a <em>Truple</em>, it creates an environment
+        where each team member can engage effectively with the task at hand, with minimal overlap.
+    </p>
+    <p>
+        This structure allows for:
+    <ul>
+        <li>Focused execution by the Driver</li>
+        <li>Immediate, task-specific guidance from the Navigator</li>
+        <li>Strategic oversight and big-picture thinking from the Observer</li>
+    </ul>
+    Let's look at the roles in more detail.
+    </p>
+
+    <h3>The Driver</h3>
+    <p>
+        The Driver is the team member actively typing code and controlling the keyboard and mouse.
+    </p>
+    <p>
+        The <em>scope</em> is confined to the current problem and its immediate context
+    </p>
+    <p>
+        Their responsibilities include:
+    <ul>
+        <li>Thinking about the syntax and writing the actual code</li>
+        <li>communicating their thoughts and actions with the rest of the group as they code</li>
+    </ul>
+    </p>
+    <h3>The Navigator</h3>
+    <p>
+        The Navigator observes the driver's work and provides guidance.
+    </p>
+    <p>
+        The <em>scope</em> is confined to the current problem and its immediate context
+    </p>
+    <p>
+        Their responsibilities include:
+    <ul>
+        <li>Reviewing the code as it's being written</li>
+        <li>Keeping track of potential issues, bugs, or areas for refactoring</li>
+        <li>Communicating their thoughts and actions with the rest of the group as they guide the Driver</li>
+        <li>Refactors, improvements, and alternative approaches, within the scope of the Navigator
+        </li>
+    </ul>
+    </p>
+    <h3>The Observer</h3>
+    <p>
+        This role has been elevated to a more strategic position. The observer is the team member actively taking a
+        broader view, considering how the current changes might impact the system as a whole.
+    </p>
+    <p>
+        The <em>scope</em> extends beyond the current task and its immediate context to encompass the entire system.
+    </p>
+    <p>
+        Their responsibilities include:
+    <ul>
+        <li>Identifying potential needs for abstraction, within the scope of the Observer</li>
+        <li>Refactoring opportunities, within the scope of the Observer</li>
+        <li>Architectural implications</li>
+    </ul>
+    </p>
+    <p>
+        This refined <em>Truple</em> dynamic, re-balances the responsibilities of the traditional roles amongst the
+        group.
+        In doing so, it leverages the strengths of each team member while maintaining clear lines of responsibility,
+        potentially leading to a more engaged, efficient and thoughtful development processes.
+    </p>
+    <h2>Preliminary Findings:</h2>
+    <p>So far, in my experiments with this approach, I find the role segregation definitely engages members more than
+        the <em>Third Wheel</em> variety.
+    <ul>
+        <li> The Driver experience is improved as it is only the Navigator that is focusing on their guidance.</li>
+        <li> The Navigator is also more effective as their scope is more focused</li>
+        <li>
+            The role of the Observer does mean that their input to the <em>Truple</em> needs to be handled with care, so
+            as not to overly disrupt the flow or introduce too many context shifts for the Navigator and Driver.
+            Communication here is key.
+        </li>
+    </ul>
+    <h3>Timing of Observations</h3>
+    <p>
+        Knowing when to introduce changes or suggestions is crucial for maintaining workflow. It is best to agree the
+        preferred timings before the start of the session. A lot of this will come down to your own judgement, the
+        people in your current <em>Truple</em>, agreed ways of working for the team and practise.
+    </p>
+    <p>
+        Possible suggestions could be:
     <ol>
-        <li><b>Driver:</b> Actively works on the task, writing code or executing the plan.</li>
-        <li><b>Navigator:</b> Guides the driver, offering immediate feedback, suggestions, and corrections.</li>
-        <li><b>Observer:</b> Maintains a broader perspective, identifying potential improvements or refactorings.</li>
+        <li><b>Commit Time:</b> when the code is being reviewed and before the narrower scope refactor</li>
+        <li><b>Prior to starting the task:</b>As Kent Beck philosophises: "make the change easy, then make the easy
+            change."
+        </li>
     </ol>
     </p>
-    <h2>Timing for Interventions</h2>
-    <p>
-        Knowing when to introduce changes or suggestions is crucial for maintaining workflow:
-    <ol>
-        <li><b>Commit Time:</b> Introduce changes during the review process to ensure team alignment before finalizing
-            work.
-        </li>
-        <li><b>Before Commit:</b> Discuss earlier if a suggested change could serve as a better starting point,
-            potentially shelving current work.
-        </li>
-    </ol>
-    </p>
-    <h2>Balancing Context Shifts and Flow</h2>
+    <h3>Balancing Context Shifts and Flow</h3>
     <p>
         To manage the balance between micro context shifts and maintaining productivity:
     <ol>
@@ -117,30 +337,31 @@
         <li><b>Clear Communication:</b> Ensure all team members understand when and how suggestions will be
             incorporated.
         </li>
-        <li><b>Flexibility:</b> Be ready to adjust roles and timing based on team needs and project requirements.</li>
+        <li><b>Flexibility:</b> Be ready to adjust roles and timing based on team needs and project requirements.
+        </li>
     </ol>
     </p>
-    <h2>AI-Assisted Trupling: A New Frontier in Collaborative Development?</h2>
+    <h2>What next?</h2>
+    <h3>AI-Assisted Truple: The new Pair Programming?</h3>
     <p>
-        The concept of <em>'trupling'</em> takes on an intriguing new
-        dimension when we introduce AI as a collaborator. Imagine a scenario where an AI model, like GPT-4, assumes
-        the role of the driver, generating code or content based on prompts and instructions of the developer at the
-        keyboard.
-        The developer at the keyboard at the keyboard becomes the navigator, guiding the AI's output, refining
-        prompts, and making real-time decisions on the generated content. Meanwhile, the traditional navigator steps
-        into the observer role, maintaining a broader perspective on the task at hand.
+        The concept of a <em>Truple</em> takes on an intriguing new dimension when we think of AI as a collaborator.
+        Perhaps, the Driver is the AI collaborator, and the Pair assume the roles of Navigator and Observer?
+        A scenario where the AI model assumes the role of the Driver, generating code or content based on prompts and
+        instructions.
+        The developer at the keyboard becomes the Navigator, guiding the AI's output, refining prompts, and making
+        real-time decisions on the generated content.
+        Meanwhile, the traditional Navigator steps into the Observer role, maintaining a broader perspective on the task
+        at hand.
+        It may not be quite at that stage yet, but soon perhaps? An experiment for the near future
     </p>
 
     <h2>Conclusion</h2>
     <p>
-        By implementing this <em>'trupling'</em> approach, we maintain our commitment to collaborative development
-        while
-        ensuring no team member is left out. This method extends the benefits of pair programming to a slightly
-        larger
-        group, fostering an inclusive environment, enhancing perspectives, and providing more opportunities for
-        knowledge sharing and skill development. It serves as a bridge between traditional pair programming and full
-        team collaboration or software teaming, demonstrating the adaptability needed in modern software development
-        practices.
+        The <em>Truple</em> approach extends the benefits of Pair Programming to a slightly larger group, fostering an
+        inclusive environment, enhancing perspectives, and providing more opportunities for knowledge sharing and skill
+        development.
+        We maintain our commitment to collaborative development while ensuring no team member is redundant or doing
+        mundane tasks by themselves.
     </p>
 </article>
 </body>
