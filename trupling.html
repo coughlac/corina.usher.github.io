@@ -44,16 +44,13 @@
     </p>
     <p>
         In fact, this approach encounters similar issues to Software Teaming (Mob Programming), particularly the
-        challenge of
-        keeping all participants engaged. The person who is neither the Navigator nor the Driver often struggles to
-        remain actively involved in the process.
+        challenge of keeping all participants engaged. The person who is neither the Navigator nor the Driver often
+        struggles to remain actively involved in the process.
     </p>
-
     <p>
         <em>I find Pair Programming to be very effective. So, why is it that the engagement level between three people,
             in the <i>same team</i>, deteriorates so quickly?</em>
     </p>
-
     <p>
         What was going on?
     </p>
@@ -70,7 +67,6 @@
         So what now? How do we solve the <em>lone developer</em> problem without introducing the <em>third wheel</em>
         dynamic?
     </p>
-
     <h2>Truple - a magic word?</h2>
     <p>
         I’d like to introduce you to a collaborative unit I refer to as a <b>Truple</b> (a nod to our use of 'Tuple' in
@@ -78,8 +74,8 @@
     </p>
     <p>
         What’s the key difference?
-        It’s the adaptation of the traditional pairing process to encompass <em>three</em>
-        people.</p>
+        It’s the adaptation of the traditional pairing process to encompass <em>three</em>people.
+    </p>
     <p>
         More specifically, <em>it's a refinement of roles, bounded by scopes, that allows everyone to remain engaged in
         their respective responsibilities.</em>
@@ -110,13 +106,15 @@
         The Driver is the team member actively typing code and controlling the keyboard and mouse.
     </p>
     <p>
-        The <em>scope</em> is confined to the current problem and its immediate context
+        The <em>scope</em> is confined to the current problem and its immediate context.
+        The driver focuses on the current task at hand, ignoring larger issues for the moment.
     </p>
     <p>
         Their responsibilities include:
     <ul>
         <li>Thinking about the syntax and writing the actual code</li>
-        <li>communicating their thoughts and actions with the rest of the <em>Truple</em> as they code</li>
+        <li>Translating the Navigator's instructions and guidance into code</li>
+        <li>Communicating their thoughts and actions with the rest of the <em>Truple</em> as they code</li>
     </ul>
     </p>
     <h3>The Navigator</h3>
@@ -130,26 +128,39 @@
         Their responsibilities include:
     </p>
     <ul>
-        <li>Reviewing the code as it's being written</li>
+        <li>Actively review the code as it's being written, looking for bugs, syntax errors, and potential improvements
+            within the scope of the current problem and its immediate context
+        </li>
         <li>Keeping track of potential issues, bugs, or areas for refactoring</li>
         <li>Communicating their thoughts and actions with the rest of the <em>Truple</em> as they guide the Driver</li>
-        <li>Refactors, improvements and alternative approaches within the scope of the Navigator</li>
     </ul>
 
     <h3>The Observer</h3>
     <p>
-        This role has been elevated to a more strategic position. The observer is the team member actively taking a
-        broader view, considering how the current changes might impact the system as a whole.
+        This role has been elevated to a more strategic position, focusing on strategic refactoring, architectural
+        alignment, and efficiency improvements beyond the immediate task.
     </p>
     <p>
-        The <em>scope</em> extends beyond the current task and its immediate context to encompass the entire system.
+        The <em>scope</em> extends beyond the current task and its immediate context to encompass the potential impact
+        of the changes on the entire system. This broad perspective means that the scope is not just looking at the
+        impact of the change from a technical perspective, but also looking at the workflows and processes involved for
+        efficiency improvements.
     </p>
     <p>
         Their responsibilities include:
     <ul>
-        <li>Identifying potential needs for abstraction, within the scope of the Observer</li>
-        <li>Refactoring opportunities, within the scope of the Observer</li>
-        <li>Architectural implications</li>
+        <li>
+            Using their broader system perspective on the task at hand to identify opportunities for refactoring, or
+            introducing abstractions that allow reuse in other areas of the system, simplifying the overall system
+        </li>
+        <li>
+            Ensuring that the solution aligns with team's architectural goals and decisions, ensuring new Architectural
+            Design Decision (ADRs) are recorded as necessary.
+        </li>
+        <li>
+            Identify opportunities for the team to improve efficiency, including tasks suitable for automation and
+            processes that may need to be challenged or re-evaluated.
+        </li>
     </ul>
 
     <h2>Preliminary Findings:</h2>
@@ -196,6 +207,16 @@
         Or maybe it will be more tailored to 'how you prefer to process information'. Do you like
         to hear it and let your subconscious get to work immediately? Do you prefer to finish your train of thought
         before you get interrupted?
+    </p>
+    <p>
+        It was suggested to me that perhaps the role of the Observer should also include observing the <em>Truple</em> session flow.
+        Beyond ensuring that timely breaks are scheduled to maintain productivity and that roles are rotated to maintain
+        fresh perspectives and engagement, they could interject their observations into the session at an appropriate
+        time? I like the idea of this approach as it tethers the more 'meta' role of the observer back to the focus of rest of the <em>Truple</em>.
+        I think I will try that out next and see how it works out.
+    </p>
+    <p>
+
     </p>
     <h2>The Future?</h2>
     <h3>Truple: The new Pair Programming?</h3>
